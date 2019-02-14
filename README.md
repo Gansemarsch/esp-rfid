@@ -144,6 +144,9 @@ For Wiegand based readers, you can configure D0 and D1 pins via settings page. B
 #### Add PIN authentication option to RFID Scan
 #### Pull list of keys from remote location
 #### Pull list of pins from remote location
+#### General Cleanup
+##### Better Error handling
+##### Better Comments
 
 ### Known Issues
 * You need to connect your MFRC522 reader to your ESP properly or you will end up with a boot loop
