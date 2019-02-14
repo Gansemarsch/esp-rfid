@@ -38,7 +38,7 @@ SOFTWARE.
 #include <AsyncMqttClient.h>
 #include <Bounce2.h>
 
- //#define DEBUG
+#define DEBUG
 
 #ifdef OFFICIALBOARD
 
@@ -96,7 +96,7 @@ unsigned long blink_ = millis();
 bool wifiFlag = false;
 bool configMode = false;
 int wmode;
-uint8_t wifipin = 255;
+uint8_t wifipin = 2;
 uint8_t buttonPin = 255;
 #define LEDoff HIGH
 #define LEDon LOW
@@ -161,6 +161,7 @@ void ICACHE_FLASH_ATTR setup()
 #endif
 
 #ifdef DEBUG
+	delay(5000);
 	Serial.begin(9600);
 	Serial.println();
 
@@ -229,7 +230,7 @@ void ICACHE_RAM_ATTR loop()
 	previousLoopMillis = currentMillis;
 
 	button.update();
-	if (button.fell()) 
+	if (button.fell())
 	{
 #ifdef DEBUG
 		Serial.println("Button has been pressed");
@@ -280,10 +281,10 @@ void ICACHE_RAM_ATTR loop()
 				Serial.print("mili : ");
 				Serial.println(millis());
 				Serial.println("deactivating relay now");
-#endif				
+#endif
 				digitalWrite(relayPin, !relayType);
 			}
-			activateRelay = false;	
+			activateRelay = false;
 		}
 	}
 	else if (lockType == 0)	// momentary relay mode

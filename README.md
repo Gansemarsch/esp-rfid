@@ -2,7 +2,7 @@
 
 [![Chat at https://gitter.im/esp-rfid/Lobby](https://badges.gitter.im/esp-rfid.svg)](https://gitter.im/esp-rfid/Lobby) [![Build Status](https://travis-ci.org/esprfid/esp-rfid.svg?branch=stable)](https://travis-ci.org/esprfid/esp-rfid) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d475052a09bd4865bc2654f524614cba)](https://www.codacy.com/app/omersiar/esp-rfid?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=esprfid/esp-rfid&amp;utm_campaign=Badge_Grade) [![BCH compliance](https://bettercodehub.com/edge/badge/esprfid/esp-rfid?branch=stable)](https://bettercodehub.com/) [![Bountysource](https://api.bountysource.com/badge/team?team_id=242217)](https://salt.bountysource.com/checkout/amount?team=esp-rfid)
 
-Access Control system using a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers and Espressif's ESP8266 Microcontroller. 
+Access Control system using a cheap MFRC522, PN532 RFID, RDM6300 readers or Wiegand RFID readers and Espressif's ESP8266 Microcontroller.
 
 [See Demo Here](https://bitadvise.com/esp-rfid/)
 
@@ -95,7 +95,7 @@ If you want to edit esp-rfid's Web UI you will need (unless using compiled execu
 * npm (comes with NodeJS installer)
 * Gulp (can be installed with npm)
 
-Gulp script also minifies HTML and JS files and compresses (gzip) them. 
+Gulp script also minifies HTML and JS files and compresses (gzip) them.
 
 In order to test your changes without flashing the firmware you can launch websocket emulator which is included in tools directory.
 * You will need to Node JS for websocket emulator.
@@ -111,7 +111,7 @@ Get more information here: https://stackoverflow.com/questions/3102819/disable-s
 
 The following table shows the typical pin layout used for connecting readers hardware to ESP:
 
-| ESP8266 | NodeMcu/WeMos | Wiegand | PN532 | MFRC522 | RDM6300 | 
+| ESP8266 | NodeMcu/WeMos | Wiegand | PN532 | MFRC522 | RDM6300 |
 |--------:|:-------------:|:-------:|:-----:|:-------:|:-------:|
 | GPIO-15 | D8            |         | SS    | SDA/SS  |         |
 | GPIO-13 | D7            | D0      | MOSI  | MOSI    |         |
@@ -138,6 +138,12 @@ For Wiegand based readers, you can configure D0 and D1 pins via settings page. B
 * Choose "Allow Access" if you want to
 * Click "Add"
 * Congratulations, everything went well, if you encounter any issue feel free to ask help on GitHub.
+
+### Next Steps
+#### Attach to MQTT logger
+#### Add PIN authentication option to RFID Scan
+#### Pull list of keys from remote location
+#### Pull list of pins from remote location
 
 ### Known Issues
 * You need to connect your MFRC522 reader to your ESP properly or you will end up with a boot loop
